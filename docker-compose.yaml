@@ -11,7 +11,7 @@ services:
     depends_on:
       - ollama
     command: >
-      http://ollama:11434/api/pull -d '{"name": "llama3.2:1b"}'
+      ${OLLAMA_HOST:-http://ollama:11434}/api/pull -d '{"name": "${LLM_MODEL:-llama3.2:1b}"}'
 
   app:
     build: .
@@ -23,7 +23,8 @@ services:
         condition: service_completed_successfully
     environment:
       - TRACELOOP_API_KEY=${TRACELOOP_API_KEY}
-      - OLLAMA_HOST=http://ollama:11434
+      - LLM_MODEL=${LLM_MODEL:-llama3.2:1b}
+      - OLLAMA_HOST=${OLLAMA_HOST:-http://ollama:11434}
 
 volumes:
   ollama_storage:
