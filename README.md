@@ -40,25 +40,25 @@ Questo progetto implementa una **CLI Chat interattiva** che utilizza un modello 
 
 Scarica le immagini e avvia Ollama in background:
 
-Bash
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   docker compose up -d   `
+```bash
+docker compose up -d
+```
 
 ### 2\. Verifica del Modello (opzionale)
 
 Il servizio ollama-puller scaricherà automaticamente llama3.2:1b (circa 1.3GB). Verifica lo stato con:
 
-Bash
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   docker exec ollama ollama list   `
+```bash
+docker exec ollama ollama list
+```
 
 ### 3\. Avvio della Chat Interattiva
 
 Per interagire con il modello e inviare le tracce al cloud, esegui:
 
-Bash
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   docker compose run --rm app   `
+```bash
+docker compose run --rm app
+```
 
 📊 Osservabilità (Cosa controllare)
 -----------------------------------
@@ -83,8 +83,8 @@ Una volta avviata la chat e inviato il primo messaggio:
 
 Per fermare tutti i servizi e rimuovere i container:
 
-Bash
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   docker compose down   `
+```bash
+docker compose down
+```
 
 _Nota: I modelli scaricati rimarranno salvati nel volume ollama\_storage per il prossimo avvio._
