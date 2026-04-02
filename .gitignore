@@ -1,0 +1,9 @@
+# Segreti e configurazioni locali
+.env
+
+# Docker e dati persistenti
+ollama_storage/
+
+# Python cache
+__pycache__/
+*.py[cod]

@@ -1,0 +1,8 @@
+# SDK di Traceloop (OpenLLMetry) - Versione minima per supporto nativo
+traceloop-sdk>=0.30.0
+
+# Libreria ufficiale Ollama per Python
+ollama>=0.3.0
+
+# Spesso richiesta come dipendenza per l'esportazione OTLP
+opentelemetry-exporter-otlp>=1.20.0
